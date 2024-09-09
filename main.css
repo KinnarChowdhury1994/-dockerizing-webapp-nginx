@@ -141,6 +141,11 @@ section#home {
     margin-bottom: 1rem;
 }
 
+#home p {
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
 /* Pricings */
 /* .price_body {
     min-height: 100vh;
@@ -160,8 +165,8 @@ section#pricing {
 .price_card {
     position: relative;
     width: 300px;
-    /* height: 550px; */
-    height: 230px;
+    height: 550px;
+    /* height: 230px; */
     padding: 1rem;
     border-radius: 20px;
     background-color: #c0eeeb;
