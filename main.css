@@ -14,6 +14,7 @@
     --light-pink: #fd9baa;
     --neon-green: #059212;
     --neon-red: #C70039;
+
 }
 
 body {
@@ -139,6 +140,9 @@ section#home {
 #home h1 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
+    background-image: linear-gradient(to right, #B3005E, #430A5D, #edbe24, #800000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 #home p {
