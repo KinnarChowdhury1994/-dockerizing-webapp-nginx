@@ -127,7 +127,7 @@ header {
 
 /* HOME */
 section#home {
-    height: calc(50vh - 60px);
+    height: calc(100vh - 65px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -138,12 +138,15 @@ section#home {
 
 #home h1 {
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 #home p {
     font-size: 1rem;
     letter-spacing: 2px;
+    max-width: 90%;
+    text-align: justify;
+    text-wrap: wrap;
 }
 
 /* Pricings */
@@ -155,18 +158,19 @@ section#home {
 } */
 
 section#pricing {
-    min-height: 600px;
+    min-height: 580px;
     padding: 1rem;
     display: flex;
-    gap: 4rem;
+    gap: 3rem;
     justify-content: center;
+    background-color: transparent;
 }
 
 .price_card {
     position: relative;
     width: 300px;
-    height: 550px;
-    /* height: 230px; */
+    /* height: 550px; */
+    height: 240px;
     padding: 1rem;
     border-radius: 20px;
     background-color: #c0eeeb;
@@ -175,7 +179,7 @@ section#pricing {
     align-items: center;
     justify-content: flex-end;
     box-shadow: 0 7px 11px var(--light-orange);
-    transition: height 0.3s ease;
+    transition: height 0.4s ease;
 }
 
 .price_card:hover {
@@ -205,7 +209,7 @@ section#pricing {
     width: 100%;
     height: 100%;
     background: linear-gradient(to right, var(--dark-orange), var(--light-orange));
-    border-radius: 25px;
+    border-radius: 30px;
     clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 50% 100%, 0% 90%);
 }
 
@@ -218,12 +222,12 @@ section#pricing {
     background-color: #fff;
     border-radius: 50px;
     color: var(--dark-orange);
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.8);
 }
 
 .price_card .header .info {
@@ -246,7 +250,7 @@ section#pricing {
 }
 
 .price_card .desc {
-    height: 320px;
+    height: 350px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -255,15 +259,15 @@ section#pricing {
 .price_card .desc li {
     list-style: none;
     color: #000;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     display: flex;
     align-items: center;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
 }
 
 .price_card .desc .icon {
     font-size: 1.5rem;
-    margin-right: 5px;
+    margin-right: 3px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -351,7 +355,7 @@ section#pricing {
 
 /* FOOTER */
 footer {
-    height: fit-content;
+    height: 30px;
     margin-top: 5px;
     position: relative;
     justify-content: center;
