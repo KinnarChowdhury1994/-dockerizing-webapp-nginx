@@ -92,5 +92,42 @@ docker images
 
 ### Push the image on ECR
 
+Create an Private Image Repository in Amazon Elastic Container Registry (ECR) and use the following steps to authenticate and push an image to your repository.
+
+
+1. Retrieve an authentication token and authenticate your Docker client to your registry. Use the AWS CLI:
+
+aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 975050024946.dkr.ecr.ap-south-1.amazonaws.com
+
+Note: If you receive an error using the AWS CLI, ensure you have installed the latest version of the AWS CLI and Docker.
+
+
+2. Build your Docker image using the following command. You can skip this step if your image is already built (InMy Case, My Image name is my-app:1.0):
+
+docker build -t kinnarchowdhury/dockerizing-nginx .
+
+
+3. After the build completes, tag your image so you can push the image to this repository:
+
+docker tag my-app:1.0 975050024946.dkr.ecr.ap-south-1.amazonaws.com/kinnarchowdhury/dockerizing-nginx:latest
+
+
+
+4. Run the following command to push this image to your newly created AWS repository:
+
+docker push 975050024946.dkr.ecr.ap-south-1.amazonaws.com/kinnarchowdhury/dockerizing-nginx:latest
+
+
+After Pushing the Image you can validate the image in the ECR whether it is available in your repository.
+
+
+References:
+
+https://www.google.com/
+https://docs.docker.com/
+https://docs.aws.amazon.com/ecr/
+https://vlearnv.herovired.com/program-timeline/186
+
+
 
 
